@@ -1,5 +1,5 @@
 #include "stdlib.h"
-#include "index_first_even.k"
+#include "index_first_even.h"
 #include "index_last_odd.h"
 
 
@@ -15,7 +15,7 @@ int sum_before_even_and_after_odd(int arr[], int len){
     int last_odd = index_last_odd(arr, len);
     int sum=0;
     
-    printf("Debug: len=%d, first_even=%d, last_odd=%d\n", len, first_even, last_odd);
+    // printf("Debug: len=%d, first_even=%d, last_odd=%d\n", len, first_even, last_odd);
 
     for(int z = 0; z < len; z++){
         if (z < first_even){

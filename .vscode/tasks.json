@@ -9,7 +9,11 @@
                 "-g",
                 "-o",
                 "${fileBasenameNoExtension}",
-                "${file}"
+                "${file}",
+                "index_first_even.c",
+                "index_last_odd.c",
+                "sum_before_even_and_after_odd.c",
+                "sum_between_even_odd.c",
             ],
             "group": "build",
             "presentation": {
@@ -40,6 +44,10 @@
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
+                "index_first_even.c",
+                "index_last_odd.c",
+                "sum_before_even_and_after_odd.c",
+                "sum_between_even_odd.c",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],

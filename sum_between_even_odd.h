@@ -1,6 +1,6 @@
 /* Так теперь выглядит сам файл file.h */
-#ifndef INDEX_H
-#define INDEX_H
+#ifndef SUM_BETWEEN_EVEN_ODD_H
+#define SUM_BETWEEN_EVEN_ODD_H
 
 /* содержимое заголовочного файла:
 объявления функций, переменных и т.д. */
