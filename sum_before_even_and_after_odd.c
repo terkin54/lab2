@@ -1,36 +1,28 @@
 #include "stdlib.h"
-#include "stdio.h"
-#include "index_first_even.c"
-#include "index_last_odd.c"
+#include "index_first_even.k"
+#include "index_last_odd.h"
 
-int sum_before_even_and_after_odd(int arr[]); 
 
-int main() {
-    int exmp[5] = {1,2,3,4,5};
-    int res = sum_before_even_and_after_odd(exmp);
-    printf("%d", res);
-}
+// int main() {
+//     int exmp[5] = {3,2,1,4,7};
+//     int len = ARRAY_SIZE(exmp);
+//     int res = sum_before_even_and_after_odd(exmp, len);
+//     printf("%d", res); 
+// }
 
-int sum_before_even_and_after_odd(int arr[]){
-    int len = sizeof(arr) / sizeof(arr[0]);
-    int first_even =  index_first_even(arr);
-    int last_odd = index_last_odd(arr);
+int sum_before_even_and_after_odd(int arr[], int len){
+    int first_even =  index_first_even(arr, len);
+    int last_odd = index_last_odd(arr, len);
     int sum=0;
+    
+    printf("Debug: len=%d, first_even=%d, last_odd=%d\n", len, first_even, last_odd);
 
-    // for (int z=0; z<first_even; z++){
-    //     sum+=abs(arr[z]);
-    // }
-    // for(int z = last_odd + 1 ; z<len; z++){
-    //     sum+=abs(arr[z]);
-    // }
-
-    for(int z = len ; z<len-1; z++){
-        if (z >= first_even){
-            continue;
-        }else if (z < last_odd){
-            continue;
-        } else {
-            sum+=abs(arr[z]);
+    for(int z = 0; z < len; z++){
+        if (z < first_even){
+            sum += abs(arr[z]);
+        }
+        if (z > last_odd){
+            sum += abs(arr[z]);
         }
     }
     return sum;
