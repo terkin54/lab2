@@ -7,7 +7,10 @@ int sum_before_even_and_after_odd(int arr[], int len){
     int first_even =  index_first_even(arr, len);
     int last_odd = index_last_odd(arr, len);
     int sum=0;
-
+    
+    if ((first_even < 0 )|| (last_odd < 0 )){
+        return 0;
+    }
     for(int z = 0; z < len; z++){
         if (z < first_even){
             sum += abs(arr[z]);

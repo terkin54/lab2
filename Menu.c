@@ -25,7 +25,7 @@ int main() {
     }
 
     task(operation, arr, cnt);
-    return -1;
+    return 0;
 }
 
 void task(int what, int arr[], int size) {

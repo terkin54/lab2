@@ -6,7 +6,7 @@
 int sum_between_even_odd(int arr[], int len){
     int first_even =  index_first_even(arr, len);
     int last_odd = index_last_odd(arr, len);
-    if ((first_even == -1 )|| (last_odd == -1 )|| (first_even >= last_odd)){
+    if ((first_even < 0 )|| (last_odd < 0 )|| (first_even > last_odd)){
         return 0;
     }
     int sum = 0;
